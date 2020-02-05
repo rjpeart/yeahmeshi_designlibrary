@@ -78,7 +78,7 @@ body{
 }
 
 .bg-off-white{
-		background-color: #F0E1C2!important;
+		background-color: #FFF7E8!important;
 }
 
 .bg-pink{
@@ -160,6 +160,13 @@ body{
 	height:80px;
 }
 
+.medium-avatar-square {
+    display: inline-block;
+    border-radius: 15%;
+    width:80px;
+    height:80px;
+}
+
 .large-avatar {
 	display: inline-block;
 	border-radius: 50%;
@@ -189,6 +196,11 @@ body{
     line-height: 1.5;
     border-radius: 12em;
     margin: 1rem 0;
+}
+
+a {
+    text-decoration: underline;
+    color: #F33E40;
 }
 
 .btn-red, .btn-red:hover {
