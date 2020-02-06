@@ -28,10 +28,41 @@ $(document).ready(function(){
         var template = Handlebars.compile($('#item-template').html())
         $('#products').html(template(data.hCs))
     })
+
+    $.getJSON('https://v2-api.sheety.co/c53613b41e6d531340ec88cfa371fb64/top10/hCs/2', function(data) {
+        var deliveryDate = data.hc.deliveryDate
+        $("#delivery").html(deliveryDate)
+    })
+
 })
-</script>
-</script>
+
+    </script>
+
 <script id="item-template" type="text/x-handlebars-template">
+
+    <!-- HEADER -->
+
+        <div class="container-fluid bg-red text-white header">
+            <div class="row">
+                <div class="col">
+                    <img src="assets/img/img_avatar.png"class="medium-avatar" style="margin-bottom: 1rem;">
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="">Top 10 Homecooks</h2>
+                    <p class="light">Delivery <span id="delivery"></span></p>
+                </div>
+            </div>
+
+        </div>
+
+<div class="container-fluid bg-off-white" style="padding-bottom: 5rem;">
+
   {{#each this}}
     <div class="row d-flex align-items-center meal-item">
         <div class="col-auto no-padding">
@@ -39,11 +70,13 @@ $(document).ready(function(){
         </div>
         <div class="col">
             <h4 class="no-margin">{{hcName}}’s Kitchen</h4>
-            <span class="text-grey">Specialities include {{speciality1}} & {{speciality2}}</span>
+            <span class="text-grey">Spesialisasi dalam membuat {{speciality1}} & {{speciality2}} </span>
             <p class="no-margin"><a href="https://{{urlFromAdminPanel}}">View menu</a></p>
         </div>
     </div>
   {{/each}}
+
+</div> 
 </script>
 
     </head>
@@ -51,7 +84,7 @@ $(document).ready(function(){
     <body>            
             
         <!-- HEADER -->
-
+<!-- 
         <div class="container-fluid bg-red text-white header">
             <div class="row">
                 <div class="col">
@@ -68,16 +101,16 @@ $(document).ready(function(){
                     <p class="light">Delivery xx.xx.xx</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="container-fluid bg-off-white" style="padding-bottom: 5rem;">
+        <!-- <div class="container-fluid bg-off-white" style="padding-bottom: 5rem;"> -->
 
             <!-- HOMECOOK KITCHENS -->
 
         <div id="products">Loading Menus...</div>
             
 
-        </div> 
+<!--         </div>  -->
 
 
 
