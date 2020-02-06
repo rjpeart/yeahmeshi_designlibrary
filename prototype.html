@@ -35,12 +35,12 @@ $(document).ready(function(){
   {{#each this}}
     <div class="row d-flex align-items-center meal-item">
         <div class="col-auto no-padding">
-            <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
+            <img src="assets/img/{{localImage}}" class="medium-avatar-square img-drop-shadow">
         </div>
         <div class="col">
             <h4 class="no-margin">{{hcName}}’s Kitchen</h4>
             <span class="text-grey">Specialities include {{speciality1}} & {{speciality2}}</span>
-            <p class="no-margin"><a href="#">View menu</a></p>
+            <p class="no-margin"><a href="https://{{urlFromAdminPanel}}">View menu</a></p>
         </div>
     </div>
   {{/each}}
@@ -74,117 +74,8 @@ $(document).ready(function(){
 
             <!-- HOMECOOK KITCHENS -->
 
-        <div id="products">Loading products...</div>
+        <div id="products">Loading Menus...</div>
             
-           <!--  <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div>
-
-            <div class="row d-flex align-items-center meal-item">
-                <div class="col-auto no-padding">
-                    <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
-                </div>
-                <div class="col">
-                    <h4 class="no-margin">[Homecook]’s Kitchen</h4>
-                    <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
-                    <p class="no-margin"><a href="#">View menu</a></p>
-                </div>
-            </div> -->
 
         </div> 
 
