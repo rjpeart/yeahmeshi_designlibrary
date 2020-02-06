@@ -16,6 +16,36 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/YMCustom.css">
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+      
+
+        <script type="text/javascript">
+
+$(document).ready(function(){
+    $.getJSON('https://v2-api.sheety.co/c53613b41e6d531340ec88cfa371fb64/top10/hCs', function(data) {
+        var template = Handlebars.compile($('#item-template').html())
+        $('#products').html(template(data.hCs))
+    })
+})
+</script>
+</script>
+<script id="item-template" type="text/x-handlebars-template">
+  {{#each this}}
+    <div class="row d-flex align-items-center meal-item">
+        <div class="col-auto no-padding">
+            <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
+        </div>
+        <div class="col">
+            <h4 class="no-margin">{{hcName}}’s Kitchen</h4>
+            <span class="text-grey">Specialities include {{speciality1}} & {{speciality2}}</span>
+            <p class="no-margin"><a href="#">View menu</a></p>
+        </div>
+    </div>
+  {{/each}}
+</script>
+
     </head>
     
     <body>            
@@ -43,8 +73,10 @@
         <div class="container-fluid bg-off-white" style="padding-bottom: 5rem;">
 
             <!-- HOMECOOK KITCHENS -->
+
+        <div id="products">Loading products...</div>
             
-            <div class="row d-flex align-items-center meal-item">
+           <!--  <div class="row d-flex align-items-center meal-item">
                 <div class="col-auto no-padding">
                     <img src="assets/img/img_avatar.png"class="medium-avatar-square img-drop-shadow">
                 </div>
@@ -152,9 +184,9 @@
                     <span class="text-grey">Specialities include Cumi asam pedas & Meatball sweet sauce</span>
                     <p class="no-margin"><a href="#">View menu</a></p>
                 </div>
-            </div>
+            </div> -->
 
-        </div>
+        </div> 
 
 
 
@@ -163,10 +195,7 @@
         <![endif]-->
 
         
-        
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="https://kit.fontawesome.com/e9971b8ce4.js" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/e9971b8ce4.js" crossorigin="anonymous"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
